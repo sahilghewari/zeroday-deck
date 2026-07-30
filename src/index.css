@@ -127,44 +127,39 @@ p {
   position: absolute;
   border-radius: 50%;
   filter: blur(120px);
-  opacity: 0.5;
-  mix-blend-mode: screen;
+  opacity: 0.3;
 }
 
 .orb-1 {
-  width: 600px;
-  height: 600px;
+  width: 400px;
+  height: 400px;
   background: #FF7A00; /* Burnt Orange */
-  top: -100px;
-  right: -100px;
+  top: -50px;
+  right: -50px;
 }
 
 .orb-2 {
-  width: 700px;
-  height: 700px;
-  background: #4F46E5; /* Indigo / Purple */
-  bottom: -200px;
+  width: 500px;
+  height: 500px;
+  background: #444444; /* Grayish color */
+  bottom: -100px;
   left: -100px;
+  opacity: 0.2;
 }
 
 .orb-3 {
-  width: 500px;
-  height: 500px;
-  background: #E11D48; /* Rose / Pink */
-  top: 30%;
-  left: 20%;
-  opacity: 0.3;
+  display: none;
 }
 
 /* Glassmorphism Effect */
 .glass-panel {
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
   border-radius: 24px;
 }
 
