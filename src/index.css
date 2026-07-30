@@ -160,19 +160,22 @@ p {
 
 @media (max-width: 768px) {
   .slide-container {
-    padding: 1.5rem;
+    padding: 2rem 1.5rem 6rem 1.5rem; /* Extra padding at bottom for nav buttons */
     overflow-y: auto;
+    justify-content: flex-start; /* Prevent vertical centering from clipping content when it overflows */
   }
   
   .responsive-split {
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 1.5rem;
+    height: auto;
   }
 
   .responsive-split-text {
     padding-right: 0;
     text-align: center;
+    flex: none; /* Prevent taking 50% of height */
   }
   
   .responsive-split-text p {
@@ -182,7 +185,8 @@ p {
 
   .responsive-split-image {
     width: 100%;
-    height: 300px;
+    min-height: 250px;
+    flex: 1; /* Take remaining space, but at least 250px */
     margin-top: 1rem;
   }
   
