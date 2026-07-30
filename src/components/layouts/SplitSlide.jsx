@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 
 export default function SplitSlide({ slide }) {
   return (
-    <div style={{ display: 'flex', width: '100%', height: '100%', alignItems: 'center' }}>
-      <div style={{ flex: 1, paddingRight: '4rem' }}>
+    <div className="responsive-split">
+      <div className="responsive-split-text">
         {slide.label && (
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -36,9 +36,9 @@ export default function SplitSlide({ slide }) {
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3, duration: 1 }}
-        style={{ flex: 1, height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        className="responsive-split-image"
       >
-        <div style={{ width: '100%', height: '80%', background: 'var(--bg-secondary)', borderRadius: '24px', position: 'relative', overflow: 'hidden' }}>
+        <div className="glass-panel" style={{ width: '100%', height: '80%', position: 'relative', overflow: 'hidden' }}>
           {slide.image ? (
             <img 
               src={slide.image} 

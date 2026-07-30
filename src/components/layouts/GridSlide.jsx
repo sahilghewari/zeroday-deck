@@ -44,10 +44,8 @@ export default function GridSlide({ slide }) {
         variants={containerVariants}
         initial="hidden"
         animate="show"
+        className="responsive-grid"
         style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem',
           marginTop: slide.body ? '0' : '4rem'
         }}
       >
@@ -55,12 +53,8 @@ export default function GridSlide({ slide }) {
           <motion.div 
             key={idx} 
             variants={itemVariants}
-            style={{
-              background: 'var(--bg-secondary)',
-              padding: '2rem',
-              borderRadius: '16px',
-              border: '1px solid var(--border-color)'
-            }}
+            className="glass-panel"
+            style={{ padding: '2rem' }}
           >
             {item.label && (
               <div style={{ color: 'var(--accent)', fontSize: '0.9rem', fontWeight: 600, letterSpacing: '0.05em', marginBottom: '1rem', textTransform: 'uppercase' }}>
