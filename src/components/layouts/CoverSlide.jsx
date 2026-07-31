@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 export default function CoverSlide({ slide }) {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '100%', textAlign: 'center' }}>
+    <div className="slide-content-wrapper" style={{ alignItems: 'center', textAlign: 'center' }}>
       
       {slide.prominentFooter && (
         <motion.div
