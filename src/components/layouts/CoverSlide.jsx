@@ -16,14 +16,25 @@ export default function CoverSlide({ slide }) {
         </motion.div>
       )}
 
-      <motion.h1 
-        initial={{ y: 20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        style={{ fontSize: 'clamp(4rem, 10vw, 8rem)', letterSpacing: '-0.04em', lineHeight: 1 }}
-      >
-        {slide.headline}
-      </motion.h1>
+      {slide.logo ? (
+        <motion.img 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          src={slide.logo} 
+          alt={slide.headline}
+          style={{ width: '100%', maxWidth: '600px', objectFit: 'contain' }}
+        />
+      ) : (
+        <motion.h1 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          style={{ fontSize: 'clamp(4rem, 10vw, 8rem)', letterSpacing: '-0.04em', lineHeight: 1 }}
+        >
+          {slide.headline}
+        </motion.h1>
+      )}
       
       {(slide.subHeadline || slide.body) && (
         <motion.p

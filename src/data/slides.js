@@ -3,7 +3,8 @@ export const slides = [
     id: 1,
     layout: 'cover',
     headline: 'ZeroDay 2.0',
-    subHeadline: 'Build. Validate. Launch.',
+    logo: '/zeroday_wordmark.jpg',
+    subHeadline: 'Day Zero: Where Startups Are Born.',
     prominentFooter: true, 
     footer: 'Presented by NexaWorks | Security Partner: SAPvyra'
   },
